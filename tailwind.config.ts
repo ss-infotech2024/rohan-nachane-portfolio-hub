@@ -79,6 +79,11 @@ export default {
           dark: '#0FA0CE',
           ocean: '#0EA5E9',
         },
+        highlight: {
+          DEFAULT: 'hsl(var(--highlight))',
+          light: 'hsl(var(--highlight) / 0.8)',
+          lighter: 'hsl(var(--highlight) / 0.6)',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

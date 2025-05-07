@@ -41,8 +41,8 @@ const Experience: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Work Experience</h2>
-          <div className="w-24 h-1 bg-blue"></div>
+          <h2 className="section-title">Work Experience</h2>
+          <div className="w-24 h-1 bg-highlight"></div>
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
@@ -57,15 +57,15 @@ const Experience: React.FC = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
                 <h3 className="text-xl font-semibold">{exp.position}</h3>
-                <div className="bg-blue/10 text-blue px-3 py-1 rounded-full text-sm">
+                <div className="bg-highlight/10 text-highlight px-3 py-1 rounded-full text-sm">
                   {exp.period}
                 </div>
               </div>
-              <h4 className="text-lg text-blue mb-3">{exp.company}</h4>
+              <h4 className="text-lg text-highlight mb-3">{exp.company}</h4>
               <ul className="space-y-2">
                 {exp.description.map((item, idx) => (
                   <li key={idx} className="flex items-start">
-                    <Briefcase size={16} className="text-blue mt-1 mr-2 flex-shrink-0" />
+                    <Briefcase size={16} className="text-highlight mt-1 mr-2 flex-shrink-0" />
                     <span className="text-slate-light">{item}</span>
                   </li>
                 ))}

@@ -19,19 +19,19 @@ const Footer: React.FC = () => {
               href="https://github.com/rohannachane" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-foreground/10 hover:bg-blue/20 transition-colors"
+              className="p-2 rounded-full bg-foreground/10 hover:bg-highlight/20 transition-colors"
               aria-label="GitHub"
             >
-              <Github size={20} className="text-blue" />
+              <Github size={20} className="text-highlight" />
             </a>
             <a 
               href="https://linkedin.com/in/rohannachane" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-foreground/10 hover:bg-blue/20 transition-colors"
+              className="p-2 rounded-full bg-foreground/10 hover:bg-highlight/20 transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={20} className="text-blue" />
+              <Linkedin size={20} className="text-highlight" />
             </a>
           </div>
         </div>

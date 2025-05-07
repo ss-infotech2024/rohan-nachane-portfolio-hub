@@ -59,8 +59,8 @@ const Projects: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Projects</h2>
-          <div className="w-24 h-1 bg-accent"></div>
+          <h2 className="section-title">Projects</h2>
+          <div className="w-24 h-1 bg-highlight"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -81,7 +81,7 @@ const Projects: React.FC = () => {
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-highlight">{project.title}</h3>
                 <p className="text-slate-light mb-4 flex-grow">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, idx) => (
@@ -89,12 +89,12 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
                 <div className="flex gap-3 mt-auto">
-                  <Button asChild size="sm" variant="outline">
+                  <Button asChild size="sm" variant="outline" className="border-highlight text-highlight hover:bg-highlight/10">
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                       <Github size={16} /> GitHub
                     </a>
                   </Button>
-                  <Button asChild size="sm">
+                  <Button asChild size="sm" className="bg-highlight hover:bg-highlight/90">
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       Live Demo
                     </a>

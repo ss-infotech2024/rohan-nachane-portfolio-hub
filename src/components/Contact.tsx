@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, Linkedin, Github } from 'lucide-react';
@@ -64,8 +63,8 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Contact Me</h2>
-          <div className="w-24 h-1 bg-accent"></div>
+          <h2 className="section-title">Contact Me</h2>
+          <div className="w-24 h-1 bg-highlight"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -76,7 +75,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+            <h3 className="content-heading mb-6">Let's Connect</h3>
             <p className="text-slate-light mb-8">
               I'm always open to discussing new projects, opportunities, and partnerships.
               Whether you have a question or just want to say hi, I'll try my best to get back to you!
@@ -110,7 +109,7 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6 bg-card p-6 rounded-lg shadow-sm">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-card p-6 rounded-lg shadow-sm border border-highlight/20">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
                 <Input
@@ -146,7 +145,7 @@ const Contact: React.FC = () => {
                   rows={5}
                 />
               </div>
-              <Button type="submit" className="w-full">Send Message</Button>
+              <Button type="submit" className="w-full bg-highlight hover:bg-highlight/90">Send Message</Button>
             </form>
           </motion.div>
         </div>
