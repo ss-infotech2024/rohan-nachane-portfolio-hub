@@ -73,6 +73,12 @@ export default {
         teal: {
           DEFAULT: '#64FFDA',
         },
+        blue: {
+          light: '#33C3F0',
+          DEFAULT: '#1EAEDB',
+          dark: '#0FA0CE',
+          ocean: '#0EA5E9',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -45,8 +45,8 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#" className="text-xl font-poppins font-semibold text-foreground">
-          Rohan<span className="text-accent">.</span>
+        <a href="#" className="text-xl font-poppins font-semibold">
+          Rohan<span className="text-blue">.</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
             <a 
               key={index} 
               href={item.href}
-              className="nav-link"
+              className="nav-link hover:text-blue"
             >
               {item.label}
             </a>
@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
             onClick={toggleTheme}
             className="ml-2"
           >
-            {isDarkMode ? <Sun size={20} className="text-accent" /> : <Moon size={20} className="text-primary" />}
+            {isDarkMode ? <Sun size={20} className="text-accent" /> : <Moon size={20} className="text-blue" />}
           </Button>
         </nav>
 
@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
             size="icon"
             onClick={toggleTheme}
           >
-            {isDarkMode ? <Sun size={20} className="text-accent" /> : <Moon size={20} className="text-primary" />}
+            {isDarkMode ? <Sun size={20} className="text-accent" /> : <Moon size={20} className="text-blue" />}
           </Button>
           <Button 
             variant="ghost" 
@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
                 <a 
                   key={index} 
                   href={item.href} 
-                  className="text-lg font-medium text-foreground hover:text-accent transition-colors"
+                  className="text-lg font-medium text-foreground hover:text-blue transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

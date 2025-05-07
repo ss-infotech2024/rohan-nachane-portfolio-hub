@@ -5,33 +5,33 @@ import { Code, Database, Server, Terminal, Laptop, Briefcase } from 'lucide-reac
 
 const skillsData = {
   "Backend": [
-    { name: "Java", icon: <Server size={24} className="text-accent" /> },
-    { name: "Spring Boot", icon: <Server size={24} className="text-accent" /> },
-    { name: "Microservices", icon: <Code size={24} className="text-accent" /> },
-    { name: "REST APIs", icon: <Code size={24} className="text-accent" /> }
+    { name: "Java", icon: <Server size={24} className="text-blue" /> },
+    { name: "Spring Boot", icon: <Server size={24} className="text-blue" /> },
+    { name: "Microservices", icon: <Code size={24} className="text-blue" /> },
+    { name: "REST APIs", icon: <Code size={24} className="text-blue" /> }
   ],
   "Frontend": [
-    { name: "HTML", icon: <Code size={24} className="text-accent" /> },
-    { name: "CSS", icon: <Code size={24} className="text-accent" /> },
-    { name: "JavaScript", icon: <Code size={24} className="text-accent" /> }
+    { name: "HTML", icon: <Code size={24} className="text-blue" /> },
+    { name: "CSS", icon: <Code size={24} className="text-blue" /> },
+    { name: "JavaScript", icon: <Code size={24} className="text-blue" /> }
   ],
   "Cloud & Tools": [
-    { name: "AWS (EC2)", icon: <Laptop size={24} className="text-accent" /> },
-    { name: "GCP", icon: <Laptop size={24} className="text-accent" /> },
-    { name: "ngrok", icon: <Terminal size={24} className="text-accent" /> }
+    { name: "AWS (EC2)", icon: <Laptop size={24} className="text-blue" /> },
+    { name: "GCP", icon: <Laptop size={24} className="text-blue" /> },
+    { name: "ngrok", icon: <Terminal size={24} className="text-blue" /> }
   ],
   "Databases": [
-    { name: "MySQL", icon: <Database size={24} className="text-accent" /> },
-    { name: "MongoDB", icon: <Database size={24} className="text-accent" /> },
-    { name: "Cassandra", icon: <Database size={24} className="text-accent" /> },
-    { name: "Derby", icon: <Database size={24} className="text-accent" /> },
-    { name: "Redis", icon: <Database size={24} className="text-accent" /> }
+    { name: "MySQL", icon: <Database size={24} className="text-blue" /> },
+    { name: "MongoDB", icon: <Database size={24} className="text-blue" /> },
+    { name: "Cassandra", icon: <Database size={24} className="text-blue" /> },
+    { name: "Derby", icon: <Database size={24} className="text-blue" /> },
+    { name: "Redis", icon: <Database size={24} className="text-blue" /> }
   ],
   "Core Strengths": [
-    { name: "Debugging", icon: <Terminal size={24} className="text-accent" /> },
-    { name: "Designing", icon: <Briefcase size={24} className="text-accent" /> },
-    { name: "Problem Solving", icon: <Briefcase size={24} className="text-accent" /> },
-    { name: "Communication", icon: <Briefcase size={24} className="text-accent" /> }
+    { name: "Debugging", icon: <Terminal size={24} className="text-blue" /> },
+    { name: "Designing", icon: <Briefcase size={24} className="text-blue" /> },
+    { name: "Problem Solving", icon: <Briefcase size={24} className="text-blue" /> },
+    { name: "Communication", icon: <Briefcase size={24} className="text-blue" /> }
   ]
 };
 
@@ -60,7 +60,7 @@ const Skills: React.FC = () => {
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
               className="skills-category"
             >
-              <h3 className="text-2xl font-semibold mb-6 text-center">{category}</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-center text-blue-dark">{category}</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {skills.map((skill, index) => (
                   <motion.div

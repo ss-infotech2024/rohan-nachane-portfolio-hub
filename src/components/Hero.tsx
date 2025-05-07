@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col gap-5"
         >
-          <h2 className="text-accent text-lg font-medium">Hello, I'm</h2>
+          <h2 className="text-blue text-lg font-medium">Hello, I'm</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
             Rohan Nachane
           </h1>
@@ -25,10 +25,10 @@ const Hero: React.FC = () => {
             RESTful APIs, and efficient cross-functional collaboration.
           </p>
           <div className="flex gap-4 mt-6">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-blue hover:bg-blue-dark">
               <a href="#projects">View My Work</a>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-blue text-blue hover:bg-blue/10">
               <a href="#contact">Contact Me</a>
             </Button>
           </div>
@@ -41,14 +41,14 @@ const Hero: React.FC = () => {
           className="flex justify-center lg:justify-end"
         >
           <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/20">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue/20">
               <img 
                 src="/placeholder.svg" 
                 alt="Rohan Nachane" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-accent/20 to-transparent"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue/20 to-transparent"></div>
           </div>
         </motion.div>
       </div>
