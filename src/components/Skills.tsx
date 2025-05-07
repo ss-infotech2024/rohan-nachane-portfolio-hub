@@ -1,57 +1,43 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Database, Html, Java, SpringBoot, Web } from 'lucide-react';
+import { Code, Database, Server, Terminal, Laptop, Briefcase } from 'lucide-react';
 
-const skillsData = [
-  {
-    category: "Back-End",
-    skills: [
-      { name: "Java", icon: <Java size={32} className="text-accent" /> },
-      { name: "Spring Boot", icon: <SpringBoot size={32} className="text-accent" /> },
-      { name: "Microservices", icon: <Code size={32} className="text-accent" /> },
-      { name: "REST APIs", icon: <Code size={32} className="text-accent" /> },
-    ]
-  },
-  {
-    category: "Front-End",
-    skills: [
-      { name: "HTML", icon: <Html size={32} className="text-accent" /> },
-      { name: "CSS", icon: <Code size={32} className="text-accent" /> },
-      { name: "JavaScript", icon: <Code size={32} className="text-accent" /> },
-    ]
-  },
-  {
-    category: "Databases",
-    skills: [
-      { name: "MySQL", icon: <Database size={32} className="text-accent" /> },
-      { name: "MongoDB", icon: <Database size={32} className="text-accent" /> },
-      { name: "Cassandra", icon: <Database size={32} className="text-accent" /> },
-      { name: "Redis", icon: <Database size={32} className="text-accent" /> },
-    ]
-  },
-  {
-    category: "Cloud & Tools",
-    skills: [
-      { name: "AWS (EC2)", icon: <Web size={32} className="text-accent" /> },
-      { name: "GCP", icon: <Web size={32} className="text-accent" /> },
-      { name: "ngrok", icon: <Web size={32} className="text-accent" /> },
-    ]
-  },
-  {
-    category: "Core Strengths",
-    skills: [
-      { name: "Debugging", icon: <Code size={32} className="text-accent" /> },
-      { name: "Designing", icon: <Code size={32} className="text-accent" /> },
-      { name: "Problem Solving", icon: <Code size={32} className="text-accent" /> },
-      { name: "Communication", icon: <Code size={32} className="text-accent" /> },
-    ]
-  }
-];
+const skillsData = {
+  "Backend": [
+    { name: "Java", icon: <Server size={24} className="text-accent" /> },
+    { name: "Spring Boot", icon: <Server size={24} className="text-accent" /> },
+    { name: "Microservices", icon: <Code size={24} className="text-accent" /> },
+    { name: "REST APIs", icon: <Code size={24} className="text-accent" /> }
+  ],
+  "Frontend": [
+    { name: "HTML", icon: <Code size={24} className="text-accent" /> },
+    { name: "CSS", icon: <Code size={24} className="text-accent" /> },
+    { name: "JavaScript", icon: <Code size={24} className="text-accent" /> }
+  ],
+  "Cloud & Tools": [
+    { name: "AWS (EC2)", icon: <Laptop size={24} className="text-accent" /> },
+    { name: "GCP", icon: <Laptop size={24} className="text-accent" /> },
+    { name: "ngrok", icon: <Terminal size={24} className="text-accent" /> }
+  ],
+  "Databases": [
+    { name: "MySQL", icon: <Database size={24} className="text-accent" /> },
+    { name: "MongoDB", icon: <Database size={24} className="text-accent" /> },
+    { name: "Cassandra", icon: <Database size={24} className="text-accent" /> },
+    { name: "Derby", icon: <Database size={24} className="text-accent" /> },
+    { name: "Redis", icon: <Database size={24} className="text-accent" /> }
+  ],
+  "Core Strengths": [
+    { name: "Debugging", icon: <Terminal size={24} className="text-accent" /> },
+    { name: "Designing", icon: <Briefcase size={24} className="text-accent" /> },
+    { name: "Problem Solving", icon: <Briefcase size={24} className="text-accent" /> },
+    { name: "Communication", icon: <Briefcase size={24} className="text-accent" /> }
+  ]
+};
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="section-padding bg-secondary/30">
+    <section id="skills" className="bg-secondary/50 section-padding">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,25 +50,29 @@ const Skills: React.FC = () => {
           <div className="w-24 h-1 bg-accent"></div>
         </motion.div>
 
-        <div className="space-y-10">
-          {skillsData.map((category, idx) => (
+        <div className="space-y-12">
+          {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
             <motion.div
-              key={idx}
+              key={category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+              className="skills-category"
             >
-              <h3 className="text-2xl font-semibold mb-6 text-center">{category.category}</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {category.skills.map((skill, index) => (
+              <h3 className="text-2xl font-semibold mb-6 text-center">{category}</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                {skills.map((skill, index) => (
                   <motion.div
                     key={index}
-                    whileHover={{ scale: 1.05 }}
-                    className="skill-icon"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className="skill-item"
                   >
                     {skill.icon}
-                    <span className="font-medium mt-2">{skill.name}</span>
+                    <p className="mt-2 font-medium">{skill.name}</p>
                   </motion.div>
                 ))}
               </div>
